@@ -58,7 +58,7 @@ class MainWindow(tk.Tk):
         media_presentation = UploadMediaPresentation(
             media_folder=media_folder, pptx_path=pptx_path
         )
-        thread = threading.Thread(target=media_presentation.Start)
+        thread = threading.Thread(target=media_presentation.start)
         thread.start()
         messagebox.showinfo(
             "Success", "Media upload started. Please wait for completion."
