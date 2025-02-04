@@ -1,7 +1,13 @@
 import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from Class_UploadMediaPresentation import UploadMediaPresentation
+
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from Class.Class_UploadMediaPresentation import UploadMediaPresentation
 
 
 class MainWindow(tk.Tk):
@@ -63,6 +69,10 @@ class MainWindow(tk.Tk):
         )
 
 
-if __name__ == "__main__":
+def main():
     app = MainWindow()
     app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
